@@ -9,12 +9,11 @@ contract AssignmentFour {
     }
     
     function functionTwo(uint num, bytes32 value) public pure returns(bytes32 finalHash) {
-         address _user1;
-         address _user2;
-         address _user3;
+      
         bytes32 hashNum = keccak256(abi.encodePacked(num));
-        uint hashNum2 = uint(keccak256(abi.encodePacked(value)));
-        bytes32 firstFunctionResult = functionOne(_user1, _user2, _user3);
-        finalHash = keccak256(abi.encodePacked(hashNum, hashNum2, firstFunctionResult));
+        bytes32 typecastHash = keccak256(abi.encodePacked(uint(value)));
+        bytes32 _result= functionOne(0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB, 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db, 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2);
+        finalHash = keccak256(abi.encodePacked(hashNum, typecastHash, _result));
     }
 }
+
