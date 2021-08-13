@@ -3,7 +3,7 @@
 pragma solidity 0.8.1;
 
 contract AssignmentFour {
-    function functionOne(address user1, address user2, address user3) internal pure returns(bytes32 result) {
+    function functionOne(address user1, address user2, address user3) public pure returns(bytes32 result) {
         bytes32 hashUser1And2 = keccak256(abi.encodePacked(user1, user2));
         result = keccak256(abi.encodePacked(hashUser1And2, user3));
     }
@@ -18,3 +18,4 @@ contract AssignmentFour {
         finalHash = keccak256(abi.encodePacked(hashNum, hashValue, _result));
     }
 }
+
