@@ -1,3 +1,6 @@
+// A Street has 4 houses,each containing 6 flats that contains 5 rooms each.. Each room can hold any number of people....
+// Write a soldiity contract that calculates the total number of flats, rooms and occupants in that street
+
 // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity 0.8.1;
