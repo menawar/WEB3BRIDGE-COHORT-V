@@ -10,8 +10,8 @@ pragma solidity 0.8.1;
 
 
 contract AssignmentFive {
-    mapping(address => uint) public trackNoOfFunctionCall;
-    mapping(address => bytes32) public functionHashOfPreviosAddressCall;
+    mapping(address => uint) private trackNoOfFunctionCall;
+    mapping(address => bytes32) private functionHashOfPreviosAddressCall;
      
     function one() public returns(bool returnValue1) {
         trackNoOfFunctionCall[msg.sender]++;
